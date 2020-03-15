@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
   validates :title, uniqueness: true
 
   def artist_name
-    self.artist_id.name
+    artist = Song.find_by(self.artist_id)
   end
 
 end
