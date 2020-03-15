@@ -1,6 +1,6 @@
 <% @artists.each do |a| %>
   <% a.songs.each do |s| %>
-    <% title = s.artist_name - s.title %>
+    <% song_title = s.artist_name - s.title %>
     <p><%= s.artist_name %> - <%= s.title %></p>
   <% end %>
 <% end %>
