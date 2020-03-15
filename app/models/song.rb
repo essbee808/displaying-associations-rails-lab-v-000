@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
   validates :title, uniqueness: true
 
   def artist_name
-    Song.artist.name
+    artist.name
   end
 
 end
