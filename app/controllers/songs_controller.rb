@@ -6,7 +6,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find_by(params[:id])
-    @artist = Artist.find_by(@song.artist_id)
+    @song.artist_id
   end
 
   def new
@@ -16,7 +16,7 @@ class SongsController < ApplicationController
   def create
     @artist = Artist.find_or_create_by(name: params[:artist][:name])
     @song = Song.new(title: params[:song][:title])
-    @artist.songs << @song
+    @song.artist
     @song.save
 
     if @song.valid?
