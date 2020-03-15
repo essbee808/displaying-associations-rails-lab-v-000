@@ -1,6 +1,6 @@
 <% @artists.each do |a| %>
   <% a.songs.each do |s| %>
-    song_title = "<% s.artist_name %> - <% s.title %>"
+    indexed_song = "<% s.artist_name %> - <% s.title %>"
     <p><%= link_to song_title, song_path(s) %></p>
   <% end %>
 <% end %>
