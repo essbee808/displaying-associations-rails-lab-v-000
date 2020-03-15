@@ -1,5 +1,5 @@
 <% @artists.each do |a| %>
   <% a.songs.each do |s| %>
-    <% indexed_song = <%=
+    <% indexed_song = <% s.artist_name %> + "-" + <% s.title %>
   <% end %>
 <% end %>
