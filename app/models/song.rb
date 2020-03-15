@@ -8,6 +8,6 @@ class Song < ActiveRecord::Base
   end
 
   def artist_and_title
-    self.artist_name + "-" + self.title
+    self.artist_name + " - " + self.title
   end
 end
