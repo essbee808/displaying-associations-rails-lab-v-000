@@ -1,7 +1,7 @@
 <% @artists.each do |a| %>
   <% a.songs.each do |s| %>
-    <% index_link = s.artist_name %>
-    <%= index_link %>
-
+    <% artist = s.artist_name %>
+    <% title = s.title %>
+    
   <% end %>
 <% end %>
